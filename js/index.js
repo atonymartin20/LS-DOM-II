@@ -33,11 +33,31 @@ mapImg.addEventListener('mouseover', function() {
     mapImg.style.width = '25%';
 });
 
+document.addEventListener('wheel', function() {
+    welcome.style.backgroundColor = 'lightgrey';
+});
 
-// * [ ] `wheel`
-// * [ ] `drag / drop`
+const header = document.querySelector('.intro');
+window.addEventListener('resize', function() {
+    header.style.display = 'none';
+});
+
+yellowBus.addEventListener('drag', function() {
+    yellowBus.style.display = 'none';
+});
+
+const navbar = document.querySelector('.nav-container');
+document.addEventListener('scroll', function() {
+    navbar.style.backgroundColor = 'red';
+})
+
+const navs = document.querySelectorAll('.nav a');
+for(let i = 0; i < navs.length; i++) {
+    navs[i].addEventListener('click',(event) => {
+      event.stopPropagation();
+      event.preventDefault();
+    });
+  }
 // * [ ] `load`
 // * [ ] `focus`
-// * [ ] `resize`
-// * [ ] `scroll`
 // * [ ] `select`

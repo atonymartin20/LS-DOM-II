@@ -54,10 +54,28 @@ document.addEventListener('scroll', function() {
 const navs = document.querySelectorAll('.nav a');
 for(let i = 0; i < navs.length; i++) {
     navs[i].addEventListener('click',(event) => {
-      event.stopPropagation();
-      event.preventDefault();
+        event.stopPropagation();
+        event.preventDefault();
     });
-  }
+}
+
+document.addEventListener("keydown", function(event) {
+    if(event.key == "t") {
+        document.addEventListener("keydown", function(event) {
+            if(event.key == "e") {
+                document.addEventListener("keydown", function(event) {
+                    if(event.key == "s") {
+                        document.addEventListener("keydown", function(event) {
+                            if(event.key == "t") {
+                                alert('Test Completed!');
+                            }
+                        })
+                    }
+                })
+            }
+        })
+    }
+})
 // * [ ] `load`
 // * [ ] `focus`
 // * [ ] `select`
